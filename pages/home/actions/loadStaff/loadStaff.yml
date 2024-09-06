@@ -3,14 +3,10 @@ kind: workflow
 name: loadStaff
 nameConfigured: true
 steps:
-  - id: '17254619778260.7545371945895674'
+  - id: '17256151934510.6602582839476421'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
-      - type: datasourceId
-        value: My Data
-        valueType: custom
-        mustSelectFirst: true
       - type: resourceId
         value: public.staff
         valueType: custom
@@ -48,6 +44,9 @@ steps:
         interpolationType: code
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false

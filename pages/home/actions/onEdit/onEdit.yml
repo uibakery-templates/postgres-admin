@@ -3,13 +3,10 @@ kind: workflow
 name: onEdit
 nameConfigured: true
 steps:
-  - id: '17254614291920.6613423034240393'
+  - id: '17256151721570.7576096436208974'
     type: UPDATE_ENTITY
-    name: update
+    name: update2
     params:
-      - type: datasourceId
-        value: My Data
-        valueType: string
       - type: resourceId
         value: public.customer
         valueType: string
@@ -21,7 +18,7 @@ steps:
               value: '{{ui.publicCustomerTable.editedRow.data.customer_id}}'
         valueType: custom
       - type: entity
-        value: ./update-entity.yml
+        value: ./update2-entity.yml
         valueType: custom
       - type: replace
         value: false
@@ -40,6 +37,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false

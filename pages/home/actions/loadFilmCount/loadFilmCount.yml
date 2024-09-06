@@ -3,20 +3,16 @@ kind: workflow
 name: loadFilmCount
 nameConfigured: true
 steps:
-  - id: '17254611145550.5917682860054294'
+  - id: '17256151516140.3151391301245454'
     type: customSQLQuery
-    name: query
+    name: query2
     params:
       - type: query
-        value: ./query-query.sql
+        value: ./query2-query.sql
         valueType: interpolatedValue
         interpolationType: string
-      - type: datasourceId
-        value: My Data
-        valueType: custom
-        mustSelectFirst: true
       - type: preparedQuery
-        value: ./query-preparedQuery.sql
+        value: ./query2-preparedQuery.sql
         valueType: interpolatedValue
       - type: preparedQueryParams
         value: []
@@ -35,6 +31,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false

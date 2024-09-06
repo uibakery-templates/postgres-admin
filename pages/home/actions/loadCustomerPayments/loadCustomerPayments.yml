@@ -3,13 +3,10 @@ kind: workflow
 name: loadCustomerPayments
 nameConfigured: true
 steps:
-  - id: '17254616698330.898757351764454'
+  - id: '17256151812020.7623748429498778'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
-      - type: datasourceId
-        value: My Data
-        valueType: string
       - type: resourceId
         value: public.payment
         valueType: string
@@ -47,6 +44,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false
