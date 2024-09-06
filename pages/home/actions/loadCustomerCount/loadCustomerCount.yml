@@ -3,20 +3,16 @@ kind: workflow
 name: loadCustomerCount
 nameConfigured: true
 steps:
-  - id: '17254609666900.1648194728895036'
+  - id: '17256151350540.7283784450997333'
     type: customSQLQuery
-    name: query
+    name: query2
     params:
       - type: query
-        value: ./query-query.sql
+        value: ./query2-query.sql
         valueType: interpolatedValue
         interpolationType: string
-      - type: datasourceId
-        value: My Data
-        valueType: custom
-        mustSelectFirst: true
       - type: preparedQuery
-        value: ./query-preparedQuery.sql
+        value: ./query2-preparedQuery.sql
         valueType: interpolatedValue
       - type: preparedQueryParams
         value: []
@@ -35,6 +31,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false

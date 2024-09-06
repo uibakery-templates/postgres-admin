@@ -3,20 +3,16 @@ kind: workflow
 name: loadPaymentCount
 nameConfigured: true
 steps:
-  - id: '17254610834500.7347523312152993'
+  - id: '17256151446710.7770342273923778'
     type: customSQLQuery
-    name: query
+    name: query2
     params:
       - type: query
-        value: ./query-query.sql
+        value: ./query2-query.sql
         valueType: interpolatedValue
         interpolationType: string
-      - type: datasourceId
-        value: My Data
-        valueType: custom
-        mustSelectFirst: true
       - type: preparedQuery
-        value: ./query-preparedQuery.sql
+        value: ./query2-preparedQuery.sql
         valueType: interpolatedValue
       - type: preparedQueryParams
         value: []
@@ -35,6 +31,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Postgres Admin
         valueType: custom
     level: 0
     fallthroughError: false
