@@ -1,0 +1,63 @@
+id: '17254614183090.6687300280033768'
+kind: workflow
+name: onEdit
+nameConfigured: true
+steps:
+  - id: '17254614291920.6613423034240393'
+    type: UPDATE_ENTITY
+    name: update
+    params:
+      - type: datasourceId
+        value: My Data
+        valueType: string
+      - type: resourceId
+        value: public.customer
+        valueType: string
+      - type: filter
+        value:
+          - column: customer_id
+            operation: '='
+            value:
+              value: '{{ui.publicCustomerTable.editedRow.data.customer_id}}'
+        valueType: custom
+      - type: entity
+        value: ./update-entity.yml
+        valueType: custom
+      - type: replace
+        value: false
+        valueType: string
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onEdit.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onEdit.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onEdit.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false

@@ -1,0 +1,67 @@
+id: '17254611720930.9955514713864855'
+definitionId: metric
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 0
+      w: 6
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 56
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.loadFilmCount.data}}'
+  name: loadfilmsMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Films
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadFilmCount.loading}}'
+    value: false
+actions: {}
+slots:
+  - id: '17254611720940.8425695546441028'
+    name: metricField
+    children:
+      - id: '17254611721150.3102480154574214'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber3
+          prop: count
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17254611720940.8425695546441028'
+        index: 0
+        slots: []
+  - id: '17254611721150.21732176654108537'
+    name: additionalField
+    children: []
+  - id: '17254611721150.3112304344554593'
+    name: groupByField
+    children: []

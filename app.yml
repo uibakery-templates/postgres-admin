@@ -1,0 +1,13 @@
+metadata:
+  favicon: ''
+  title: Postgres Admin
+  description: ''
+  breakpoints: []
+  rendererCachingEnabled: true
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+  density: compact
+internalType: project

@@ -1,0 +1,1 @@
+SELECT COUNT(payment_id) FROM public.payment

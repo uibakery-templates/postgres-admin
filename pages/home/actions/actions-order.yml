@@ -1,0 +1,8 @@
+- loadCustomerCount
+- loadPaymentCount
+- loadFilmCount
+- loadStaffCount
+- loadCustomers
+- onEdit
+- loadCustomerPayments
+- loadStaff

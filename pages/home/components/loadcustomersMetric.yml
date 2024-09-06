@@ -1,0 +1,67 @@
+id: '17254610139090.31235511798205207'
+definitionId: metric
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 6
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.loadCustomerCount.data}}'
+  name: loadcustomersMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Customers
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadCustomerCount.loading}}'
+    value: false
+actions: {}
+slots:
+  - id: '17254610139090.4764489277855315'
+    name: metricField
+    children:
+      - id: '17254610139360.07020967956500357'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber
+          prop: count
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17254610139090.4764489277855315'
+        index: 0
+        slots: []
+  - id: '17254610139370.20123469068092392'
+    name: additionalField
+    children: []
+  - id: '17254610139370.834985514922701'
+    name: groupByField
+    children: []

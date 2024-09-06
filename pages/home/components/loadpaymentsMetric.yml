@@ -1,0 +1,67 @@
+id: '17254610991220.496006856162827'
+definitionId: metric
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 6
+      y: 0
+      w: 6
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 28
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.loadPaymentCount.data}}'
+  name: loadpaymentsMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Payments
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPaymentCount.loading}}'
+    value: false
+actions: {}
+slots:
+  - id: '17254610991220.9055835682910043'
+    name: metricField
+    children:
+      - id: '17254610991410.7681869608496592'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber2
+          prop: count
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17254610991220.9055835682910043'
+        index: 0
+        slots: []
+  - id: '17254610991420.7255753797659081'
+    name: additionalField
+    children: []
+  - id: '17254610991420.6953979850842358'
+    name: groupByField
+    children: []

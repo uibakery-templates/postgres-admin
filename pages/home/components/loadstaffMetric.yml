@@ -1,0 +1,67 @@
+id: '17254612278480.2396071961363304'
+definitionId: metric
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 18
+      y: 0
+      w: 6
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 84
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.loadStaffCount.data}}'
+  name: loadstaffMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Staff
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadStaffCount.loading}}'
+    value: false
+actions: {}
+slots:
+  - id: '17254612278480.4851711621388324'
+    name: metricField
+    children:
+      - id: '17254612278680.4597003483219888'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber4
+          prop: count
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17254612278480.4851711621388324'
+        index: 0
+        slots: []
+  - id: '17254612278680.9944817637949417'
+    name: additionalField
+    children: []
+  - id: '17254612278680.6858512720910417'
+    name: groupByField
+    children: []

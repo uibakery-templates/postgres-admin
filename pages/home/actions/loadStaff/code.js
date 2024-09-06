@@ -1,0 +1,1 @@
+return {{data}}.map(d => ({ title: d.email, value: d.staff_id}))

@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    activebool:
+      value: '{{ui.publicCustomerTable.editedRow.data.activebool}}'
+  custom: ''
